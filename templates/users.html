@@ -1,0 +1,36 @@
+{# djlint:off J018 #}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Liste des utilisateurs" />
+        <title>Utilisateurs</title>
+    </head>
+    <body>
+        <h1>Utilisateurs</h1>
+        <a href="/ajouter">Ajouter un utilisateur</a>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Mail</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user[1] }}</td>
+                        <td>{{ user[2] }}</td>
+                        <td>{{ user[3] }}</td>
+                        <td>
+                            <a href="/supprimer/{{ user[0] }}">Supprimer</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

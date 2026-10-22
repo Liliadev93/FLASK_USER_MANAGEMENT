@@ -1,0 +1,20 @@
+{# djlint:off J018 #}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Ajouter un utilisateur" />
+        <title>Ajouter un utilisateur</title>
+    </head>
+    <body>
+        <h1>Ajouter un utilisateur</h1>
+        <form action="/ajouter" method="post">
+            <input type="text" name="nom" placeholder="Nom">
+            <input type="text" name="prenom" placeholder="Prénom">
+            <input type="email" name="mail" placeholder="exemple@test.fr">
+            <button type="submit">Ajouter</button>
+        </form>
+        <a href="/users">Retour à la liste</a>
+    </body>
+</html>
